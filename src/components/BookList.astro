@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+
+// Filenames are NNN-slug.md; higher number = more recent, so sort id descending.
+const books = (await getCollection('books')).sort((a, b) => b.id.localeCompare(a.id));
+---
+
+<ul class="book-list">
+	{books.map(({ data }) => (
+		<li>
+			<strong>{data.subtitle ? `${data.title}: ${data.subtitle}` : data.title}</strong> by {data.author}
+			{data.note && ` (${data.note})`}
+		</li>
+	))}
+</ul>
+
+<style>
+	.book-list {
+		display: grid;
+		row-gap: var(--spacing-200);
+	}
+</style>
