@@ -1,3 +1,43 @@
+@font-face {
+	font-family: 'League Spartan';
+	src: url('/fonts/LeagueSpartan-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'League Spartan';
+	src: url('/fonts/LeagueSpartan-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'League Spartan';
+	src: url('/fonts/LeagueSpartan-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'League Spartan';
+	src: url('/fonts/LeagueSpartan-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Victor Mono';
+	src: url('/fonts/VictorMono-Regular.woff2') format('woff2');
+	font-weight: 400 500;
+	font-style: normal;
+	font-display: swap;
+}
+
 @layer base {
 	:root {
 		--fs-200: clamp(0.7rem, calc(0.81rem + -0.13vw), 0.78rem);
@@ -43,10 +83,11 @@
 
 		/* type: change these to experiment with fonts */
 		--display: 'Newsreader', Georgia, serif;
-		--body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+		--body: 'League Spartan', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+		--site-heading: 'Ballet', var(--display);
 		--font-heading: var(--display);
 		--font-body: var(--body);
 		--font-ui: var(--body);
-		--font-code: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+		--font-code: 'Victor Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 	}
 }
