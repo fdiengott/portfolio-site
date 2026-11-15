@@ -3,6 +3,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 import SectionBanner from '../../components/SectionBanner.astro';
+import BookList from '../../components/BookList.astro';
 
 import { formatDate } from '../../utils/formatDate';
 
@@ -43,6 +44,7 @@ const publishedDate = formatDate(entry.data.date);
 				<input class="book-search" type="search" placeholder="Search books..." id="book-search-input" />
 			)}
 			<Content />
+			{entry.data.books && <BookList />}
 		</div>
 	</article>
 	<div class="scroll-top">
