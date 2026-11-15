@@ -1,5 +1,5 @@
 {
-	"name": "portfolio-astro",
+	"name": "portfolio-site",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
